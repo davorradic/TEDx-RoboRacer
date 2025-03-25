@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.15);  /* Reduced from 0.3 to 0.15 for lighter overlay */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,7 +75,7 @@
             transition: background 0.3s;
         }
         .video-overlay:hover {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.4);  /* Reduced from 0.6 to 0.4 for lighter hover state */
         }
         .video-overlay i {
             color: #fff;
@@ -422,7 +422,7 @@
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title">Martijn Hendriks</h3>
-                                        <h4 class="subtitle">Lecturer data science, law and ethics / ICT Projectmanager </h4>
+                                        <h4 class="subtitle">Lecturer data science, law and ethics / ICT Projectmanager </h4>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -448,6 +448,11 @@
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
                                 <img src="tedx/img/Sprekers/Parisa.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
                                         <a class="sp-in" href="https://www.linkedin.com/in/parisamehran/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1803,8 +1808,14 @@ $(document).ready(function() {
             patterns: {
                 youtube: {
                     index: 'youtube.com/',
-                    id: 'v=',
-                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                    id: function(url) {
+                        // Extract video ID from URL
+                        var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+                        if (!m || !m[1]) return null;
+                        return m[1];
+                    },
+                    // Use mobile embed URL for Shorts
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0&showinfo=0&playsinline=1'
                 }
             }
         }
