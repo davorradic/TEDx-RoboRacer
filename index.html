@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.15);  /* Reduced from 0.3 to 0.15 for lighter overlay */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,7 +75,7 @@
             transition: background 0.3s;
         }
         .video-overlay:hover {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.4);  /* Reduced from 0.6 to 0.4 for lighter hover state */
         }
         .video-overlay i {
             color: #fff;
@@ -137,7 +137,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <div class="lgx-nav-right navbar-right">
                             <div class="lgx-cart-area">
-                                <a class="lgx-btn lgx-btn" style="color: white;" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator" target="_blank">Buy Ticket</a>
+                                <a class="lgx-btn lgx-btn" style="color: white;" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator" target="_blank">Get your ticket for free</a>
                             </div>
                         </div>
                         <ul class="nav navbar-nav lgx-nav navbar-right">
@@ -247,7 +247,30 @@
                 </div>
                 <!--//.ROW-->
                 <!--//.ROW-->
+
                 <div class="row" style="display: flex; flex-wrap: wrap;" >
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Barend_Last.jpg" alt="Speaker"/>
+                                <!-- <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=abc123">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div> -->
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://www.barendlast.com/perskit" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/barendlast/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Barend Last</h3>
+                                        <h4 class="subtitle">Author, keynote speaker, teacher, and education developer</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
@@ -374,6 +397,22 @@
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
+                                <img src="tedx/img/Sprekers/Jonathan_Ijzerman.jpg" alt="Speaker"/>
+                                    <div class="social-group">
+                                        <a class="sp-insta" href="https://RobotCandy.nl" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/jonathanijzerman/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Jonathan Ijzerman</h3>
+                                        <h4 class="subtitle">AI vanguard, trainer, synthographer, and software developer</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
                                 <img src="tedx/img/Sprekers/Louis_Bekker.jpg" alt="Speaker" style="width: 100%; height: 100%; object-fit: cover;"/>
                                 <figcaption>
                                     <div class="social-group">
@@ -399,7 +438,7 @@
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title">Martijn Hendriks</h3>
-                                        <h4 class="subtitle">Lecturer data science, law and ethics / ICT Projectmanager </h4>
+                                        <h4 class="subtitle">Lecturer data science, law and ethics / ICT Projectmanager </h4>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -411,6 +450,7 @@
                                 <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker"/>
                                 <figcaption>
                                     <div class="social-group">
+                                        <a class="sp-insta" href="https://oscarguerrerorosado.github.io/" target="_blank"><i class="fa fa-link"></i></a>
                                         <a class="sp-in" href="https://www.linkedin.com/in/oscar-guerrero-rosado-88bb34280/?originalSubdomain=es" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
@@ -425,6 +465,11 @@
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
                                 <img src="tedx/img/Sprekers/Parisa.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
                                         <a class="sp-in" href="https://www.linkedin.com/in/parisamehran/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -1071,7 +1116,7 @@
                                                         <h4>18:20 – 19:00 | Dinner (I still need to find a sponsor for good meal) & Networking Break</h4>
                                                     
                                                         <h4>19:00 – 19:50 | Session 3</h4>
-                                                        <p><strong>Room 1:</strong> still to be announced</p>
+                                                        <p><strong>Room 1:</strong> Barend Last, Still to be announced</p>
                                                         <p><strong>Room 2:</strong> still to be announced</p>
                                                     
                                                         <h4>19:50 – 20:00 | Closing & Thank You</h4>
@@ -1081,6 +1126,7 @@
                                                 <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                             </div>
                                         </div>
+                                        
                                         <div class="panel-heading" role="tab" id="headingOne5">
                                             <div class="panel-title">
                                                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
@@ -1181,8 +1227,13 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion8" href="#collapseOne8" aria-expanded="true" aria-controls="collapseOne8">
                                                         <div class="lgx-single-schedule">
-                                                            <div class="author">
+                                                            <div class="author" style="position: relative;">
                                                                 <img src="tedx/img/Sprekers/Parisa.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                             <div class="schedule-info">
                                                                 <h4 class="time">14. May 2025</h4>
@@ -1197,7 +1248,7 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                             <div id="collapseOne8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne8">
                                                 <div class="panel-body">
                                                     <p class="text">
-                                                        Dr. Parisa Mehram delves into AI-driven education, exploring how technology is transforming teaching methods, personalized learning, and student engagement.
+                                                        Dr. Parisa Mehran delves into AI-driven education, exploring how technology is transforming teaching methods, personalized learning, and student engagement.
                                                     </p>
                                                     <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
@@ -1273,7 +1324,9 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                             <div id="collapseFor6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor6">
                                                 <div class="panel-body">
                                                     <p class="text">
-                                                        With the rise of automation and AI, are we heading toward a world where robots replace human intelligence? Oscar Guerrero Rosado will challenge common fears and discuss the balance between human and machine collaboration.
+                                                        A revolution in robotics is about to come to change our lives. But what will change? How will it impact our lives? What can we do to minimize the negative effects of this new technology?
+
+                                                        During this talk, we will address these questions and will reflect on the benefits that a more biologically inspired approach, such as NeuroRobotics, can offer.
                                                     </p>
                                                     <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
@@ -1316,7 +1369,7 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                             <div class="schedule-info">
                                                                 <h4 class="time">14. May 2025</h4>
                                                                 <h3 class="title">The Left & Right Brain – Why Creativity Must Not Be Forgotten</h3>
-                                                                <h4 class="author-info">For <span>James Bullard</span> - <span></span></h4>
+                                                                <h4 class="author-info">For <span>James Bullard</span>  <span></span></h4>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1326,6 +1379,60 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                 <div class="panel-body">
                                                     <p class="text">
                                                         In an age dominated by data and logic, where does creativity fit in? James will explore the role of the left and right brain, emphasizing the importance of keeping creative thinking alive alongside technological advancements.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="tedx/img/Sprekers/Robin_van_Breukelen.jpg" alt="Speaker">
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">The Power of AI Agents</h3>
+                                                                <h4 class="author-info">For <span>Robin van Breukelen</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        How can businesses run 24/7 without hiring extra people? Robin van Breukelen will reveal how AI agents are transforming the way companies operate—boosting productivity, automating tasks, and driving innovation in real time.
+
+Learn how leading companies like OpenAI and C3.AI leverage AI agents to achieve billion-dollar success with lean teams. Discover why these “digital colleagues” are not a distant dream but a game-changing reality today—and what you can do right now to harness their power.    
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="tedx/img/Sprekers/Jonathan_Ijzerman.jpg" alt="Speaker">
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">Jonathan IJzerman is an AI vanguard, trainer, synthographer, and software developer.</h3>
+                                                                <h4 class="author-info">For <span>Jonathan Ijzerman</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        He invented EVA, an AI agent that helps him explore the boundaries between human and machine, creativity and code. At TEDx Nijmegen, they share a thought-provoking dialogue about consciousness, evolution, and the future of AI. After hearing her speak, you may find yourself questioning whether she's merely a tool.    
                                                     </p>
                                                     <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
@@ -1408,7 +1515,34 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                     <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
                                             </div>
+                                            
                                         </div>
+                                        <div class="panel panel-default lgx-panel">
+                                        <div class="panel-heading" role="tab" id="headingOneBarend">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOneBarend" aria-expanded="true" aria-controls="collapseOneBarend">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="author">
+                                                            <img src="tedx/img/Sprekers/Barend_Last.jpg" alt="Speaker">
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">The E-bike Effect, and How AI Can Make You Smarter - but Also Lazier</h3>
+                                                            <h4 class="author-info">By <span>Barend Last</span>, <span>barendlast.com</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOne5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Does relying on generatieve AI-systems make us smarter or simply lazier? Writer and teacher Barend Last explores the fascinating concept of cognitive offloading - the way we delegate mental tasks to technology. Using the playful metaphor of his girlfriend's e-bike, he challenges the common assumption that AI always weakens critical thinking or creativity.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                         
                                         
                                     </div>
@@ -1538,15 +1672,14 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                     <div class="lgx-single-registration-inner">
                                         <div class="single-top">
                                             <h3 class="title" >TEDx</h3>
-                                            <h4 class="price"><i>€</i>15,77</h4>
+                                            <h4 class="price">Free</h4>
                                         </div>
                                         <div class="single-bottom">
                                             <ul class="list-unstyled list">
                                                 <li>Access to:</li>
                                                 <li>TEDx event</li>
-                                                <li>Student? Use code <strong>STUDENT</strong> for 60% off</li>
                                             </ul>
-                                            <a class="lgx-btn" target="_blank" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator"><span>Buy Ticket</span></a>
+                                            <a class="lgx-btn" target="_blank" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator"><span>Get your ticket for free</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1753,8 +1886,14 @@ $(document).ready(function() {
             patterns: {
                 youtube: {
                     index: 'youtube.com/',
-                    id: 'v=',
-                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                    id: function(url) {
+                        // Extract video ID from URL
+                        var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+                        if (!m || !m[1]) return null;
+                        return m[1];
+                    },
+                    // Use mobile embed URL for Shorts
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0&showinfo=0&playsinline=1'
                 }
             }
         }
