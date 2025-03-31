@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.15);  /* Reduced from 0.3 to 0.15 for lighter overlay */
+            background: rgba(0,0,0,0.01);  /* Reduced from 0.15 to 0.08 for much lighter overlay */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,15 +75,15 @@
             transition: background 0.3s;
         }
         .video-overlay:hover {
-            background: rgba(0,0,0,0.4);  /* Reduced from 0.6 to 0.4 for lighter hover state */
+            background: rgba(0,0,0,0.25);  /* Reduced from 0.4 to 0.25 for lighter hover state */
         }
         .video-overlay i {
             color: #fff;
-            font-size: 72px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            font-size: 52px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* Enhanced shadow for better visibility */
             transition: transform 0.3s, color 0.3s;
             position: absolute;
-            top: 50%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -448,6 +448,11 @@
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
                                 <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=DaDJDXhYRJw&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
                                         <a class="sp-insta" href="https://oscarguerrerorosado.github.io/" target="_blank"><i class="fa fa-link"></i></a>
@@ -1309,8 +1314,15 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                 <div class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor6" aria-expanded="true" aria-controls="collapseOne6">
                                                         <div class="lgx-single-schedule">
-                                                            <div class="author">
+                                                            
+                                                            <div class="author" style="position: relative;">
                                                                 <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                                
                                                             </div>
                                                             <div class="schedule-info">
                                                                 <h4 class="time">14. May 2025</h4>
@@ -1406,7 +1418,7 @@ Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. 
                                                     <p class="text">
                                                         How can businesses run 24/7 without hiring extra people? Robin van Breukelen will reveal how AI agents are transforming the way companies operate—boosting productivity, automating tasks, and driving innovation in real time.
 
-Learn how leading companies like OpenAI and C3.AI leverage AI agents to achieve billion-dollar success with lean teams. Discover why these “digital colleagues” are not a distant dream but a game-changing reality today—and what you can do right now to harness their power.    
+Learn how leading companies like OpenAI and C3.AI leverage AI agents to achieve billion-dollar success with lean teams. Discover why these "digital colleagues" are not a distant dream but a game-changing reality today—and what you can do right now to harness their power.    
                                                     </p>
                                                     <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
