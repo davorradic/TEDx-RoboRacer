@@ -59,9 +59,52 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <script src="https://kit.fontawesome.com/9a6ef6b3c5.js" crossorigin="anonymous"></script>
+
+    <style>
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.01);  /* Reduced from 0.15 to 0.08 for much lighter overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: background 0.3s;
+        }
+        .video-overlay:hover {
+            background: rgba(0,0,0,0.25);  /* Reduced from 0.4 to 0.25 for lighter hover state */
+        }
+        .video-overlay i {
+            color: #fff;
+            font-size: 52px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* Enhanced shadow for better visibility */
+            transition: transform 0.3s, color 0.3s;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .video-overlay:hover i {
+            transform: translate(-50%, -50%) scale(1.2);
+            color: #e62b1e;
+        }
+        .video-btn {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    </style>
 </head>
 
-<body class="home" style="background-image: url(tedx/img/techBack.jpg);">
+<body class="home" style="background-image: url(tedx/img/techBack.jpg); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;">
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -94,7 +137,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <div class="lgx-nav-right navbar-right">
                             <div class="lgx-cart-area">
-                                <a class="lgx-btn lgx-btn" style="color: white;" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator" target="_blank">Buy Ticket</a>
+                                <a class="lgx-btn lgx-btn" style="color: white;" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator" target="_blank">Get your ticket for free</a>
                             </div>
                         </div>
                         <ul class="nav navbar-nav lgx-nav navbar-right">
@@ -190,32 +233,39 @@
 
 
 <!--SPEAKERS-->
-<section style="background-image: url(tedx/img/techBack.jpg);">
+<section>
     <div id="lgx-speakers" class="lgx-speakers lgx-speakers2">
         <div class="lgx-inner">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="lgx-heading lgx-heading-white">
-                            <h2 class="heading">Who’s Speaking</h2>
+                            <h2 class="heading">Who's Speaking</h2>
                             <!-- <h3 class="subheading">Welcome to the dedicated to building remarkable Speakers!</h3> -->
                         </div>
                     </div>
                 </div>
                 <!--//.ROW-->
+                <!--//.ROW-->
+
                 <div class="row" style="display: flex; flex-wrap: wrap;" >
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
-                                <img src="tedx/img/Sprekers/peter_merry.jpg" alt="Speaker"/>
+                                <img src="tedx/img/Sprekers/Barend_Last.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=C-U3CiVREPg">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
-                                        <a class="sp-fb" href="https://petermerry.org/"><i class="fa fa-link"></i></a>
-                                        <a class="sp-in" href="https://www.linkedin.com/in/peterdmerry/"><i class="fa fa-linkedin"></i></a>
+                                        <a class="sp-fb" href="https://www.barendlast.com/perskit" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/barendlast/" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
-                                        <h3 class="title">Dr. Peter Merry</h3>
-                                        <h4 class="subtitle">Co-Founder Ubiquity University and Wyrd Technologies</h4>
+                                        <h3 class="title">Barend Last</h3>
+                                        <h4 class="subtitle">Author, keynote speaker, teacher, and education developer</h4>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -224,15 +274,118 @@
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
-                                <img src="tedx/img/Sprekers/jamesbullard.jpg" alt="Speaker"/>
+                                <img src="tedx/img/Sprekers/Chris_de_korte.jpg" alt="Speaker"/>
+                                <!-- <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=abc123">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div> -->
                                 <figcaption>
                                     <div class="social-group">
-                                        <a class="sp-insta" href="https://www.jamesebullard.com/"><i class="fa fa-link"></i></a>
-                                        <a class="sp-in" href="https://www.linkedin.com/in/james-bullard-46b4042b/"><i class="fa fa-linkedin"></i></a>
+                                        <a class="sp-fb" href="https://www.radboudumc.nl/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/chris-de-korte-0b43a83/" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
-                                        <h3 class="title">James Bullard</h3>
-                                        <h4 class="subtitle">Speaker, Author, Host</h4>
+                                        <h3 class="title">Chris de Korte</h3>
+                                        <h4 class="subtitle">RadboudumcChair Medical UltraSound Imaging Center</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Carolien-Kattenbelt.jpg" alt="Speaker" style="width: 100%; height: 100%; object-fit: cover;"/>
+                                <!-- <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=DbvpEn_UAUY">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div> -->
+                                
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://www.han.nl/onderzoek/onderzoekers/carolien-kattenbelt/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/carolien-kattenbelt-02b227113/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Carolien Kattenbelt</h3>
+                                        <h4 class="subtitle">Balanced Energy Systems (HAN)</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/daniel_verloop.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=DbvpEn_UAUY">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://civiqs.nl/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/danielverloop/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Daniel Verloop</h3>
+                                        <h4 class="subtitle">AI Specialist</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Dennis_Berkhof.jpg" alt="Speaker"/>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://www.bit-academy.nl/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/dennisberkhof/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Dennis Berkhof</h3>
+                                        <h4 class="subtitle">Oprichter Bit Academy</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Erwin_Folmer.jpg" alt="Speaker"/>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://www.bit-academy.nl/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/erwinfolmer/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Dr. Erwin Folmer</h3>
+                                        <h4 class="subtitle">Lector Applied Data Science & AI (HAN)</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Gerry_Koons.jpg" alt="Speaker"/>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://gerrykoons.com/" target="_blank"><i class="fa fa-link"></i></a>
+                                        
+                                        <a class="sp-in" href="https://www.linkedin.com/in/gerry-koons-81618797/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Dr. Gerry Koons</h3>
+                                        <h4 class="subtitle">Medical Doctor and Researcher in AI & Biomaterials</h4>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -242,10 +395,15 @@
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
                                 <img src="tedx/img/Sprekers/GuusWitjes.png" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=Cr4F2oWlZ9A&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
-                                        <a class="sp-insta" href="https://guuswitjes.com/"><i class="fa fa-link"></i></a>
-                                        <a class="sp-in" href="https://www.linkedin.com/in/guuswitjes/"><i class="fa fa-linkedin"></i></a>
+                                        <a class="sp-insta" href="https://guuswitjes.com/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/guuswitjes/" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title">Guus Witjes</h3>
@@ -258,10 +416,124 @@
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
-                                <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker"/>
+                                <img src="tedx/img/Sprekers/jamesbullard.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=6SaGAHBGAFI&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
-                                        <a class="sp-in" href="https://www.linkedin.com/in/oscar-guerrero-rosado-88bb34280/?originalSubdomain=es"><i class="fa fa-linkedin"></i></a>
+                                        <a class="sp-insta" href="https://www.jamesebullard.com/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/james-bullard-46b4042b/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">James Bullard</h3>
+                                        <h4 class="subtitle">Speaker, Author, Host</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Jan-Bransen.png" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=8RrsymQGJNU&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                    <div class="social-group">
+                                        <a class="sp-insta" href="https://www.ru.nl/personen/bransen-j" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/jan-bransen-3aa96118/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Jan Bransen</h3>
+                                        <h4 class="subtitle">Professor of Philosophy of the Behavioral Sciences at Radboud University.</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Jonathan_Ijzerman.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=tHbPgnu2l_A&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                    <div class="social-group">
+                                        <a class="sp-insta" href="https://RobotCandy.nl" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/jonathanijzerman/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Jonathan Ijzerman</h3>
+                                        <h4 class="subtitle">AI vanguard, trainer, synthographer, and software developer</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Louis_Bekker.jpg" alt="Speaker" style="width: 100%; height: 100%; object-fit: cover;"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=lQ2buy32mYI&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-insta" href="https://vakkanjers.nl" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/louis-bekker-a8315824/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Louis Bekker</h3>
+                                        <h4 class="subtitle">MTOB W&T Education / Campus I-EM Delft - Waterstof / Activator</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Martijn_Hendriks.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O8sxJWjo4YU&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <div class="social-group">
+                                        
+                                        <a class="sp-in" href="https://www.linkedin.com/in/hendriks1/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Martijn Hendriks</h3>
+                                        <h4 class="subtitle">Lecturer data science, law and ethics / ICT Projectmanager </h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=DaDJDXhYRJw&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-insta" href="https://oscarguerrerorosado.github.io/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/oscar-guerrero-rosado-88bb34280/?originalSubdomain=es" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title">Oscar Guerrero Rosado</h3>
@@ -275,9 +547,14 @@
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
                                 <img src="tedx/img/Sprekers/Parisa.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
                                 <figcaption>
                                     <div class="social-group">
-                                        <a class="sp-in" href="https://www.linkedin.com/in/parisamehran/"><i class="fa fa-linkedin"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/parisamehran/" target="_blank"><i class="fa fa-linkedin"></i></a>
                                     </div>
                                     <div class="speaker-info">
                                         <h3 class="title">Dr Parisa Mehran</h3>
@@ -287,6 +564,115 @@
                             </figure>
                         </div>
                     </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/peter_merry.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=qzEwsiC3Fa4&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://petermerry.org/" target="_blank"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/peterdmerry/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Dr. Peter Merry</h3>
+                                        <h4 class="subtitle">Co-Founder Ubiquity University and Wyrd Technologies</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Peter_koopmans.jpg" alt="Speaker"/>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <!--<a class="sp-fb" href="https://petermerry.org/"><i class="fa fa-link"></i></a>-->
+                                        <a class="sp-in" href="https://www.linkedin.com/in/peter-koopmans-535427207/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Peter Koopmans</h3>
+                                        <h4 class="subtitle">Assistant Professor MRI physics for image-guided radiation oncology (Radboud University Nijmegen)</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Robin_van_Breukelen.jpg" alt="Speaker"/>
+                                <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O6mQCLXYTs0&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div>
+                                <figcaption>
+                                    <div class="social-group">
+                                        <!--<a class="sp-fb" href="https://petermerry.org/"><i class="fa fa-link"></i></a>-->
+                                        <a class="sp-in" href="https://www.linkedin.com/in/robinvanbreukelen/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Robin van Breukelen</h3>
+                                        <h4 class="subtitle">AI agents en robots om jouw werk efficiënter te maken</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Ronald-Bijl.jpeg" alt="Speaker"/>
+                                <!-- <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O6mQCLXYTs0&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div> -->
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://connect4shore.nl/"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/ronaldbijl/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Ronald Bijl</h3>
+                                        <h4 class="subtitle">Director Connect4Shore</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-speaker2 lgx-single-speaker3">
+                            <figure>
+                                <img src="tedx/img/Sprekers/Tom-Jansen-Groesbeek.jpg" alt="Speaker"/>
+                                <!-- <div class="video-overlay">
+                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O6mQCLXYTs0&feature=shorts">
+                                        <i class="fa fa-play-circle"></i>
+                                    </a>
+                                </div> -->
+                                <figcaption>
+                                    <div class="social-group">
+                                        <a class="sp-fb" href="https://www.ru.nl/personen/janssen-groesbeek-t"><i class="fa fa-link"></i></a>
+                                        <a class="sp-in" href="https://www.linkedin.com/in/tom-janssen-groesbeek/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <div class="speaker-info">
+                                        <h3 class="title">Tom Jansen Groesbeek</h3>
+                                        <h4 class="subtitle">Scientific Programmer (Radboud University Nijmegen)</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
                     <!-- <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-speaker2 lgx-single-speaker3">
                             <figure>
@@ -376,16 +762,16 @@
                     <div class="col-xs-12">
                         <div class="lgx-tab">
                             <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">  <!--lgx-nav-nogap lgx-nav-colorful-->
-                                <li class="active"><a data-toggle="pill" href="#home" style="display: flex; justify-content: space-between;"><img src="tedx/img/IMG_0944.gif" alt="Roboracer" style="width: 12rem;"><section><h3>First <span>Day</span></h3> <p><span>09 </span>May, 2025</p></section></a></li>
+                                <li><a data-toggle="pill" href="#home" style="display: flex; justify-content: space-between;"><img src="tedx/img/IMG_0944.gif" alt="Roboracer" style="width: 12rem;"><section><h3>First <span>Day</span></h3> <p><span>09 </span>May, 2025</p></section></a></li>
                                 <li><a data-toggle="pill" href="#menu1" style="display: flex; justify-content: space-between;"><img src="tedx/img/IMG_0944.gif" alt="Roboracer" style="width: 12rem;"><section><h3>Second <span>Day</span></h3> <p><span>12 </span>May, 2025</p></section></a></li>
                                 <li><a data-toggle="pill" href="#menu2" style="display: flex; justify-content: space-between;"><img src="tedx/img/IMG_0944.gif" alt="Roboracer" style="width: 12rem;"><section><h3>Third <span>Day</span></h3> <p><span>13 </span>May, 2025</p></section></a></li>
                                 <li><a data-toggle="pill" href="#menu3" style="display: flex; justify-content: space-between;"><img src="tedx/img/IMG_0944.gif" alt="Roboracer" style="width: 12rem;"><section style="display: flex; flex-direction: column; justify-content: center;"><h3>Fourth <span>Day</span></h3> <p><span>14 </span>May, 2025</p></section></a></li>
-                                <li><a data-toggle="pill" href="#menu4" style="display: flex; justify-content: space-between;"><img src="tedx/img/logo-white.png" alt="TEDx" style="width: 12rem;"><section><h3>Fourth <span>Day</span></h3> <p><span>14 </span>May, 2025</p></section></a></li>
+                                <li class="active"><a data-toggle="pill" href="#menu4" style="display: flex; justify-content: space-between;"><img src="tedx/img/logo-white.png" alt="TEDx" style="width: 12rem;"><section><h3>Fourth <span>Day</span></h3> <p><span>14 </span>May, 2025</p></section></a></li>
                             </ul>
                             <div class="tab-content lgx-tab-content">
 
 
-                                <div id="home" class="tab-pane fade in active">
+                                <div id="home" class="tab-pane fade">
 
                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default lgx-panel">
@@ -415,10 +801,7 @@
                                     </div>
 
                                 </div>
-
-
                                 <div id="menu1" class="tab-pane fade">
-
                                     <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default lgx-panel">
                                             <div class="panel-heading" role="tab" id="headingOne2">
@@ -447,8 +830,6 @@
                                     </div>
 
                                 </div>
-
-
                                 <div id="menu2" class="tab-pane fade">
 
                                     <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
@@ -666,8 +1047,6 @@
                                     </div>
 
                                 </div>
-
-
                                 <div id="menu3" class="tab-pane fade">
 
                                     <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
@@ -839,40 +1218,619 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div id="menu4" class="tab-pane fade">
-
-                                    <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
+                                <div id="menu4" class="tab-pane fade in active">
+                                    <div class="panel panel-default lgx-panel">
+                                        <div class="panel-heading" role="tab" id="headingOpening">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionOpening" href="#collapseOpening" aria-expanded="true" aria-controls="collapseOpening">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">16:00 - 16:10</h4>
+                                                            <h3 class="title">Opening & Welcome</h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="collapseOpening" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOpening">
+                                            <div class="panel-body">
+                                                <p class="text">
+                                                    <div class="schedule">
+                                                        <h4>16:00 – 16:10 | Opening & Welcome</h4>
+                                                        <p>Introduction to the event and speakers. Explanation of the schedule and transitions. Please consider that schedule can change.</p>
+                                                    
+                                                        <h4>16:10 – 17:10 | Session 1</h4>
+                                                        <p><strong>Room 1 Creative Technology:</strong> Jan Bransen (16:10-16:25), Barend Last (16:25-16:40), Chris de Korte (16:40-16:55), Peter Koopmans (16:55-17:10)</p>
+                                                        <p><strong>Room 2 Junior Technovium:</strong> Dennis Berkhof (16:10-16:25), Daniel Verloop (16:25-16:40), James Bullard (16:40-16:55), Tom Janssen Groesbeek (16:55-17:10)</p>
+                                                    
+                                                        <h4>17:10 – 17:20 | Transition Break</h4>
+                                                    
+                                                        <h4>17:20 – 18:20 | Session 2</h4>
+                                                        <p><strong>Room 1 Creative Technology:</strong> Dr. Parisa Mehran (17:20-17:35), Oscar Guerrero Rosado (17:35-17:50), Dr. Peter Merry (17:50-18:05), Jonathan Ijzerman (18:05-18:20)</p>
+                                                        <p><strong>Room 2 Junior Technovium:</strong> Martijn Hendriks (17:20-17:35), Robin van Breukelen (17:35-17:50), Guus Witjes (17:50-18:05), Erwin Folmer (18:05-18:20)</p>
+                                                    
+                                                        <h4>18:20 – 19:00 | <a target="_blank" href="https://www.han.nl/nieuws/2021/11/de-H2-demonstrator-leert-je-meer-over-waterstoftechniek/">H2 Tosti by HAN, click here for more information</a> & Pizza</h4>
+                                                    
+                                                        <h4>19:00 – 19:45 | Session 3</h4>
+                                                        <p><strong>Room 1 Creative Technology:</strong> Louis Bekker (19:00-19:15), Carolien Kattenbelt (19:15-19:30)</p>
+                                                        <p><strong>Room 2 Junior Technovium:</strong> Gerry Koons (19:00-19:15), Ronald Bijl (19:15-19:30)</p>
+                                                    
+                                                        <h4>19:50 – 20:00 | Closing & Thank You</h4>
+                                                        <p>Summary, appreciation for speakers & audience, and possible networking reception.</p>
+                                                    </div>    
+                                                </p>
+                                                <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                            </div>
+                                        </div>
                                         <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingOne5">
+                                            <div class="panel-heading" role="tab" id="headingForJan">
                                                 <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne2">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseForJan" aria-expanded="true" aria-controls="collapseOneJan">
                                                         <div class="lgx-single-schedule">
-                                                            <div class="author author-multi">
-                                                                <img src="tedx/img/TEDx.svg" style="width: 5rem; height: 5rem;" alt="Speaker"/>
-                                                                <!-- <img src="http://placehold.it/800x800" alt="Speaker"/>
-                                                                <img src="http://placehold.it/800x800" alt="Speaker"/>
-                                                                <img src="http://placehold.it/800x800" alt="Speaker"/> -->
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Jan-Bransen.png" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=8RrsymQGJNU&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                             <div class="schedule-info">
-                                                                <h4 class="time">16:00 - 21.00</h4>
-                                                                <h3 class="title">TEDx</h3>
-                                                                <!-- <h4 class="author-info">For <span>Roboracer participants</span> - <span>Open to watch</span></h4> -->
-                                                                
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">Did you know that the original meaning of the Greek word SCHOOL was: "FREE TIME"?</h3>
+                                                                <h4 class="author-info">For <span>Jan Bransen</span>,  <span>Radboud University</span></h4>
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div id="collapseOne5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
                                                 <div class="panel-body">
                                                     <p class="text">
-                                                        The TEDx schedule will be visible here soon
+                                                        It referred to the time and space given to freely practice something you hadn’t yet mastered — without judgment, without pressure. There were no grades, no assessments. Just the freedom to learn, to grow, to explore.
+
+                                                        <br />So what happened?
+                                                        <br />How did we manage to turn this beautiful concept of education into something rigid, stressful, and full of fear?
+
+                                                        <br />If you're curious to find out — and if you’re open to reimagining what school could be — come and join me for my TEDx talk.
+
+                                                        <br />Let’s rediscover the true meaning of learning.
                                                     </p>
-                                                    <h4 class="location"><strong>Location:</strong> TEDx Stage</h4>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                        <div class="panel-heading" role="tab" id="headingOne5">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="author">
+                                                            <img src="tedx/img/Sprekers/Chris_de_korte.jpg" alt="Speaker">
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">AI Analysis in Medical UltraSound Imaging</h3>
+                                                            <h4 class="author-info">By <span>Chris de Korte</span>, <span>Radboudumc</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOne5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Chris de Korte will discuss how AI will revolutionize medical ultrasound imaging from a technology currently in hospitals operated by very skilled medical specialist to a diagnostic tool that can be operated without extensive training and is available everywhere.    
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="panel-heading" role="tab" id="headingOne5">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="author" style="position: relative;">
+                                                            <img src="tedx/img/Sprekers/Daniel_Verloop.jpg" alt="Speaker">
+                                                            <div class="video-overlay">
+                                                                <a class="video-btn" href="https://www.youtube.com/watch?v=DbvpEn_UAUY">
+                                                                    <i class="fa fa-play-circle"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">AI Specialist</h3>
+                                                            <h4 class="author-info">By <span>Daniel Verloop</span>, <span>civiqs.nl</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOne5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne6">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne6">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="tedx/img/Sprekers/Dennis_Berkhof.jpg" alt="Speaker">
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">AI in Education</h3>
+                                                                <h4 class="author-info">By <span>Dennis Berkhof</span>, <span>bit-academy.nl</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseOne6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne6">
+                                                    <div class="panel-body">
+                                                        <p class="text">
+                                                        </p>
+                                                        <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne7">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion7" href="#collapseOne7" aria-expanded="true" aria-controls="collapseOne7">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="tedx/img/Sprekers/Erwin_Folmer.jpg" alt="Speaker">
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">AI & beer</h3>
+                                                                <h4 class="author-info">By <span>Dr. Erwin Folmer</span>, <span>HAN University of Applied Sciences</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseOne7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="panel-body">
+                                                        <p class="text">
+                                                            Artificial intelligence is increasingly making its way into the world, even in the beer industry. At the Arnhem and Nijmegen University of Applied Sciences, you can now enjoy a beer created with the help of AI.
+
+Researcher Erwin Folmer used artificial intelligence to craft the perfect beer. According to the data, this new beer should be the most delicious one yet.</p>
+                                                        <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne8">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion8" href="#collapseOne8" aria-expanded="true" aria-controls="collapseOne8">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Parisa.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">AI in Education
+                                                                    How is artificial intelligence reshaping the future of learning?</h3>
+                                                                <h4 class="author-info">By <span>Dr Parisa Mehran</span>, <span>HAN University of Applied Sciences</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div id="collapseOne8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne8">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Dr. Parisa Mehran delves into AI-driven education, exploring how technology is transforming teaching methods, personalized learning, and student engagement.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTwo5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/GuusWitjes.png" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=Cr4F2oWlZ9A&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">AI is transforming how we live and work (and it might just be the best thing that’s happened to us. 😉)</h3>
+                                                                <h4 class="author-info">By <span>Guus Witjes</span> - <span>HAN University of Applied Sciences</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseTwo5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        What if AI isn’t here to replace you, but to work for you? In this talk, Guus Witjes shares how he built his own team of AI assistants, an “AI swarm”, to reclaim time, boost creativity, and make work (and life) more human. With real stories from HAN’s online marketing department and his personal life, he shows how you can start building your own AI team today, and why doing so might be the most empowering move you’ll make this year.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseTre5" aria-expanded="true" aria-controls="collapseTwo5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">17:00 - 17.20</h4>
+                                                                <h3 class="title">Coffee Break, Networking & Light Bites </h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="collapseTre5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTre">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Take a moment to connect with fellow attendees, exchange ideas, and enjoy some refreshments before we continue.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor6">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor6" aria-expanded="true" aria-controls="collapseOne6">
+                                                        <div class="lgx-single-schedule">
+                                                            
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Oscar.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=P-oqJvpfUuQ&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">Are the Robots Going to Take Over?</h3>
+                                                                <h4 class="author-info">For <span>Oscar Guerrero Rosado</span> - <span>Radboud University</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor6" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor6">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        A revolution in robotics is about to come to change our lives. But what will change? How will it impact our lives? What can we do to minimize the negative effects of this new technology?
+
+                                                        During this talk, we will address these questions and will reflect on the benefits that a more biologically inspired approach, such as NeuroRobotics, can offer.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingForLouis">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseForLouis" aria-expanded="true" aria-controls="collapseOneLouis">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Louis_Bekker.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=lQ2buy32mYI&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">HHO Hydrogen Fuel Cell</h3>
+                                                                <h4 class="author-info">For <span>Louis Bekker</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseForLouis" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor6">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Louis Bekker will discuss the revolutionairy development of HHO Hydrogen in the energy transition. With details about the elektrolysing process in the Industry, the fuelcell applications in the Automotive and the replacement of natural gas into HHO Hydrogen in the Urban environment. Supplemented with safety, storage, installation and usage information.</p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/jamesbullard.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=6SaGAHBGAFI&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">The Left & Right Brain – Why Creativity Must Not Be Forgotten</h3>
+                                                                <h4 class="author-info">For <span>James Bullard</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        In an age dominated by data and logic, where does creativity fit in? James will explore the role of the left and right brain, emphasizing the importance of keeping creative thinking alive alongside technological advancements.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Robin_van_Breukelen.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O6mQCLXYTs0&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">The Power of AI Agents</h3>
+                                                                <h4 class="author-info">For <span>Robin van Breukelen</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        How can businesses run 24/7 without hiring extra people? Robin van Breukelen will reveal how AI agents are transforming the way companies operate—boosting productivity, automating tasks, and driving innovation in real time.
+
+Learn how leading companies like OpenAI and C3.AI leverage AI agents to achieve billion-dollar success with lean teams. Discover why these "digital colleagues" are not a distant dream but a game-changing reality today—and what you can do right now to harness their power.    
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor5">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor5" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Jonathan_Ijzerman.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=tHbPgnu2l_A&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">Dialogue with an AI – EVA & Jonathan on the Future of AI</h3>
+                                                                <h4 class="author-info">For <span>Jonathan Ijzerman</span>  <span></span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Jonathan IJzerman is an AI vanguard, trainer, synthographer, and software developer. He invented EVA, an AI agent that helps him explore the boundaries between human and machine, creativity and code. At TEDx Nijmegen, they share a thought-provoking dialogue about consciousness, evolution, and the future of AI. After hearing her speak, you may find yourself questioning whether she's merely a tool.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingForM">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionM" href="#collapseForM" aria-expanded="true" aria-controls="collapseOne5">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/Martijn_Hendriks.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=O8sxJWjo4YU&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">The Future of AI & Law</h3>
+                                                                <h4 class="author-info">For <span>Martijn Hendriks</span> - <span>HAN University of Applied Sciences</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseForM" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingForM">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Dealing with AI - How to think outside the box while navigating law.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingFor7">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseFor7" aria-expanded="true" aria-controls="collapseOne7">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author" style="position: relative;">
+                                                                <img src="tedx/img/Sprekers/peter_merry.jpg" alt="Speaker">
+                                                                <div class="video-overlay">
+                                                                    <a class="video-btn" href="https://www.youtube.com/watch?v=qzEwsiC3Fa4&feature=shorts">
+                                                                        <i class="fa fa-play-circle"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">Technology & Consciousness</h3>
+                                                                <h4 class="author-info">For <span>Dr. Peter Merry</span> - <span>Co-Founder Ubiquity University and Wyrd Technologies</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseFor7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor7">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Can technology expand human consciousness? Dr. Peter Merry will dive into the intersection of emerging technologies and human awareness, exploring the profound ways they shape our perception and evolution.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                            <div class="panel-heading" role="tab" id="headingForK">
+                                                <div class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseForK" aria-expanded="true" aria-controls="collapseOneK">
+                                                        <div class="lgx-single-schedule">
+                                                            <div class="author">
+                                                                <img src="tedx/img/Sprekers/Peter_koopmans.jpg" alt="Speaker">
+                                                            </div>
+                                                            <div class="schedule-info">
+                                                                <h4 class="time">14. May 2025</h4>
+                                                                <h3 class="title">AI in MRI physics for image-guided radiation oncology</h3>
+                                                                <h4 class="author-info">For <span>Peter Koopmans</span> - <span>Radboudumc</span></h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="collapseForK" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFor">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        AI is transforming MRI physics for image-guided radiation oncology. Peter Koopmans will discuss the potential impact on jobs and society.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="panel panel-default lgx-panel">
+                                        <div class="panel-heading" role="tab" id="headingOneBarend">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOneBarend" aria-expanded="true" aria-controls="collapseOneBarend">
+                                                    <div class="lgx-single-schedule" >
+                                                        <div class="author" style="position: relative;">
+                                                            
+                                                            <img src="tedx/img/Sprekers/Barend_Last.jpg" alt="Speaker">
+                                                            <div class="video-overlay">
+                                                                <a class="video-btn" href="https://www.youtube.com/watch?v=C-U3CiVREPg&feature=shorts">
+                                                                    <i class="fa fa-play-circle"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">The E-bike Effect, and How AI Can Make You Smarter - but Also Lazier</h3>
+                                                            <h4 class="author-info">By <span>Barend Last</span>, <span>barendlast.com</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOne5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        Does relying on generatieve AI-systems make us smarter or simply lazier? Writer and teacher Barend Last explores the fascinating concept of cognitive offloading - the way we delegate mental tasks to technology. Using the playful metaphor of his girlfriend's e-bike, he challenges the common assumption that AI always weakens critical thinking or creativity.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default lgx-panel">
+                                        <div class="panel-heading" role="tab" id="headingOneTom">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOneTOm" aria-expanded="true" aria-controls="collapseOneBarend">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="author">
+                                                            <img src="tedx/img/Sprekers/Tom-Jansen-Groesbeek.jpg" alt="Speaker">
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">The Joy of Discovery: Navigating AI with Curiosity and Caution</h3>
+                                                            <h4 class="author-info">By <span>Tom Jansen Groesbeek</span>, <span>Radboud University Nijmegen</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOneTom" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        What if the next big shift in cybersecurity is not about code, but about language itself? In this talk, I break down how AI systems like ChatGPT can be manipulated through carefully crafted prompts, revealing how language has become a powerful tool for both curiosity and exploitation. I invite the audience to become AI-smart, equipped not just to admire these tools but to explore and use them with curiosity, caution, and confidence.
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default lgx-panel">
+                                        <div class="panel-heading" role="tab" id="headingOneTom">
+                                            <div class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapseOneTOm" aria-expanded="true" aria-controls="collapseOneBarend">
+                                                    <div class="lgx-single-schedule">
+                                                        <div class="author">
+                                                            <img src="tedx/img/Sprekers/Gerry_Koons.jpg" alt="Speaker">
+                                                        </div>
+                                                        <div class="schedule-info">
+                                                            <h4 class="time">14. May 2025</h4>
+                                                            <h3 class="title">Bridging the Lab and the Clinic</h3>
+                                                            <h4 class="author-info">By <span>Dr Gerry Koons</span>, <span>RadboudUMC Nijmegen</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOneTom" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <p class="text">
+                                                        
+                                                    </p>
+                                                    <h4 class="location"><strong>Location:</strong> Technovium</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                        
                                     </div>
 
                                 </div>
@@ -921,6 +1879,7 @@
                                 <div class="single">
                                     <a class="" target="_blank" href="https://cavaa.eu/"><img src="tedx/img/Sponsers/CAVAA_logo.png" alt="sponsor"/></a>
                                 </div>
+                                
                             </div>
                         </div>
                         <!--//col-->
@@ -931,14 +1890,20 @@
                             <h3 class="sponsored-heading third-heading">Partners</h3>
                             <div class="sponsors-area">
                                 <div class="single">
+                                    <a class="" target="_blank" href="https://www.han.nl/over-de-han/organisatie/bedrijfsonderdelen/centrum-sustainable-solutions/"><img src="tedx/img/Sponsers/New Sustainable-Solutions_experiencentre_rood_zwart_cmyk.png" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
+                                    <a class="" target="_blank" href="https://www.bildungnijmegen.nl/"><img src="tedx/img/Sponsers/Logo-Bildung-Nijmegen.avif" alt="sponsor"/></a>
+                                </div>
+                                <div class="single">
                                     <a class="" target="_blank" href="https://www.ted.com/"><img src="tedx/img/TEDx.svg" alt="partner"/></a>
                                 </div>
                                 <div class="single">
                                     <a class="" target="_blank" href="https://roboracer.ai/"><img src="tedx/img/IMG_0944.gif"  alt="partner"/></a>
                                 </div>
-                                <!-- <div class="single">
-                                    <a class="" href="#"><img src="http://placehold.it/467x157" alt="partner"/></a>
-                                </div> -->
+                                <div class="single">
+                                    <a class="" href="#"><img src="tedx/img/Sponsers/Internationalisering.png" alt="partner"/></a>
+                                </div>
                             </div>
                         </div>
                         <!--//col-->
@@ -1000,15 +1965,14 @@
                                     <div class="lgx-single-registration-inner">
                                         <div class="single-top">
                                             <h3 class="title" >TEDx</h3>
-                                            <h4 class="price"><i>€</i>15,77</h4>
+                                            <h4 class="price">Free</h4>
                                         </div>
                                         <div class="single-bottom">
                                             <ul class="list-unstyled list">
                                                 <li>Access to:</li>
                                                 <li>TEDx event</li>
-                                                <li>Free coffee</li>
                                             </ul>
-                                            <a class="lgx-btn" target="_blank" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator"><span>Buy Ticket</span></a>
+                                            <a class="lgx-btn" target="_blank" href="https://www.eventbrite.com/e/tickets-tedx-roc-nijmegen-1204808858729?aff=oddtdtcreator"><span>Get your ticket for free</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1115,6 +2079,9 @@
                     </div>
                     <div class="lgx-footer-single">
                         <h3 class="footer-title">Contact</h3>
+                        <p class="text">
+                            For any questions, please contact us at <a href="mailto:d.radic@roc-nijmegen.nl">d.radic@roc-nijmegen.nl</a>
+                        </p>
                         <!-- <p class="text">
                             You should connect social area <br> for Any update
                         </p> -->
@@ -1199,6 +2166,33 @@
 
 <!-- CUSTOM SCRIPT  -->
 <script src="assets/js/custom.script.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.video-btn').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        iframe: {
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: function(url) {
+                        // Extract video ID from URL
+                        var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+                        if (!m || !m[1]) return null;
+                        return m[1];
+                    },
+                    // Use mobile embed URL for Shorts
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0&showinfo=0&playsinline=1'
+                }
+            }
+        }
+    });
+});
+</script>
 
 
 
